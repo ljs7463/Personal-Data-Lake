@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# config폴더 
-config
+# core폴더 
+core
