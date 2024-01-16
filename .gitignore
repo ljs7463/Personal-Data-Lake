@@ -130,3 +130,6 @@ dmypy.json
 
 # core폴더 
 core
+
+# 가상환경 폴더
+dev
