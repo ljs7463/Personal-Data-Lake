@@ -4,10 +4,10 @@ import numpy as np
 import sys
 import os
 from pathlib import Path
-path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\airflow\\database'
-sys.path.append('../../database')
-sys.path.append(path)
-sys.path.append(str(Path(os.getcwd())))
+# path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\airflow\\database'
+sys.path.append('./database')
+# sys.path.append(path)
+# sys.path.append(str(Path(os.getcwd())))
 from gcp import BigqueryHandler, bigquery_client
 from google.cloud import bigquery
 
