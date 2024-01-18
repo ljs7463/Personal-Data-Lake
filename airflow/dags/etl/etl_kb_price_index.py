@@ -7,7 +7,7 @@ from pathlib import Path
 path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\database'
 sys.path.append(path)
 sys.path.append(str(Path(os.getcwd())))
-from gcp import BigqueryHandler, bigquery_client
+from database.gcp import BigqueryHandler, bigquery_client
 from google.cloud import bigquery
 
 
