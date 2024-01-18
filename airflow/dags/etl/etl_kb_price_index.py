@@ -4,7 +4,7 @@ import numpy as np
 import sys
 import os
 from pathlib import Path
-path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\database'
+path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\airflow\\database'
 sys.path.append(path)
 sys.path.append(str(Path(os.getcwd())))
 from database.gcp import BigqueryHandler, bigquery_client
