@@ -4,19 +4,9 @@ import numpy as np
 import sys
 import os
 from pathlib import Path
-# path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\airflow\\database'
-
-# 현재 스크립트의 경로를 가져옵니다.
-current_dir = os.path.dirname(os.path.realpath(__file__))
-# 이전 디렉토리의 경로를 계산한다.
-parent_dir = os.path.abspath(os.path.join(current_dir, os.pardir))
-# database 폴더의 경로를 계산합니다.
-database_dir = os.path.join(parent_dir, 'database')
-
-# database 폴더를 sys.path에 추가합니다.
-sys.path.append(database_dir)
-
-# sys.path.append(path)
+path = 'C:\\Users\\ljs74\\Documents\\GitHub\\Personal-Data-Lake\\airflow\\database'
+sys.path.append('/database')
+sys.path.append(path)
 sys.path.append(str(Path(os.getcwd())))
 from gcp import BigqueryHandler, bigquery_client
 from google.cloud import bigquery
