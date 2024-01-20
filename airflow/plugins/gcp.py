@@ -1,7 +1,7 @@
 from google.cloud import bigquery, storage
 from google.oauth2 import service_account
 from googleapiclient import discovery
-from path import GOOGLE_AUTH
+from oauth_path import GOOGLE_AUTH
 import time
 
 # GCP 인증정보 객체
