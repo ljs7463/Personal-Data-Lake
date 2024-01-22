@@ -1,4 +1,4 @@
-from google.cloud import bigquery, storage
+from google.cloud import bigquery
 from google.oauth2 import service_account
 from googleapiclient import discovery
 from oauth_path import GOOGLE_AUTH
@@ -11,7 +11,7 @@ credentials = service_account.Credentials.from_service_account_file(GOOGLE_AUTH)
 bigquery_client = bigquery.Client(credentials = credentials)
 
 # 스토리지 클라이언트 객체
-storage_client = storage.Client(credentials=credentials)
+# storage_client = storage.Client(credentials=credentials)
 
 # 클라우드 SQL 클라이언트 객체
 sql_client = discovery.build("sqladmin", "v1beta4", credentials=credentials)
@@ -26,25 +26,25 @@ class BigqueryHandler:
     def __init__(self):
         pass
 
-    def create_bucket(self, bucket_name):
-        """
-        버킷 생성
-        """
-        # 버킷 객체 정의
-        bucket = storage_client.bucket(bucket_name)
-        # 스토리지 클래스 - 스탠다드
-        bucket.storage_class = "STANDARD"
-        # 버킷 생성
-        self.bucket = storage_client.create_bucket(bucket, location="asia-northeast3")
-        self.logger.debug(f"버킷 생성 완료 - {bucket_name}")
+    # def create_bucket(self, bucket_name):
+    #     """
+    #     버킷 생성
+    #     """
+    #     # 버킷 객체 정의
+    #     bucket = storage_client.bucket(bucket_name)
+    #     # 스토리지 클래스 - 스탠다드
+    #     bucket.storage_class = "STANDARD"
+    #     # 버킷 생성
+    #     self.bucket = storage_client.create_bucket(bucket, location="asia-northeast3")
+    #     self.logger.debug(f"버킷 생성 완료 - {bucket_name}")
 
-    def select_bucket(self, bucket_name):
-        """
-        버킷 선택
-        """
-        # 버킷 선택
-        self.bucket = storage_client.get_bucket(bucket_name)
-        self.logger.debug(f"버킷 선택 완료 - {bucket_name}")
+    # def select_bucket(self, bucket_name):
+    #     """
+    #     버킷 선택
+    #     """
+    #     # 버킷 선택
+    #     self.bucket = storage_client.get_bucket(bucket_name)
+    #     self.logger.debug(f"버킷 선택 완료 - {bucket_name}")
 
     def upload_to_gcs(self, file_path):
         """
@@ -186,19 +186,19 @@ class BigqueryHandler:
             blob_name_list.append(blob.name)
         return blob_name_list
 
-    def delete_blob(self, bucket_name, blob_name):
-        """
-        블랍 삭제
-        """
-        # 버킷 선택
-        bucket = storage_client.get_bucket(bucket_name)
-        # 버킷 내 블랍 리스트
-        blobs = bucket.list_blobs(prefix=blob_name)
-        # 블랍 삭제
-        for blob in blobs:
-            self.logger.debug(f"블랍 삭제 시작 - {blob.name}")
-            blob.delete()
-            self.logger.debug(f"블랍 삭제 완료 - {blob.name}")
+    # def delete_blob(self, bucket_name, blob_name):
+    #     """
+    #     블랍 삭제
+    #     """
+    #     # 버킷 선택
+    #     bucket = storage_client.get_bucket(bucket_name)
+    #     # 버킷 내 블랍 리스트
+    #     blobs = bucket.list_blobs(prefix=blob_name)
+    #     # 블랍 삭제
+    #     for blob in blobs:
+    #         self.logger.debug(f"블랍 삭제 시작 - {blob.name}")
+    #         blob.delete()
+    #         self.logger.debug(f"블랍 삭제 완료 - {blob.name}")
 
     def get_gbq_table_schema(self, project, dataset_id, table_id):
         """
