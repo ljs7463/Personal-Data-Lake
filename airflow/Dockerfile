@@ -7,5 +7,5 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 # ENV PYTHONPATH="$PYTHONPATH:/plugins"
 ENV PYTHONPATH="$PYTHONPATH:/opt/airflow/plugins"
-# ENC BigQuery oauth info
-ENV BIGQUERY_AUTH_JSON_PATH = /mnt/c/Users/ljs74/Documents/GitHub/Personal-Data-Lake/airflow/core/config/gcp_oauth.json
+# ENV BigQuery oauth info
+ENV BIGQUERY_AUTH_JSON_PATH=/mnt/c/Users/ljs74/Documents/GitHub/Personal-Data-Lake/airflow/core/config/gcp_oauth.json
