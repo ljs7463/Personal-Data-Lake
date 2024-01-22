@@ -11,11 +11,11 @@ with DAG(
 ) as dag:
     bash_1 = BashOperator(
         task_id = 'bash_t1',
-        bash_comman = 'echo 1'
+        bash_command = 'echo 1'
     )
     bash_2 = BashOperator(
         task_id = 'bash_t2',
-        bash_comman = 'echo $HOSTNAME'
+        bash_command = 'echo $HOSTNAME'
     )
 
     bash_1 >> bash_2
