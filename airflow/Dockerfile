@@ -8,4 +8,4 @@ RUN pip install -r requirements.txt
 # 커스텀 모듈 사용을 위한 환경변수 설정
 ENV PATH="$PATH:/plugins"
 # ENV PYTHONPATH="$PYTHONPATH:/plugins"
-ENV PYTHONPATH="$PYTHONPATH:/opt/Personal-DataLake/airflow/plugins"
+ENV PYTHONPATH="$PYTHONPATH:/opt/Personal-DataLake/airflow"
