@@ -9,6 +9,7 @@ from pathlib import Path
 # sys.path.append(path)
 # sys.path.append(str(Path(os.getcwd())))
 sys.path.append('../../plugins')
+sys.path.append('../plugins')
 from gcp import BigqueryHandler, bigquery_client
 from google.cloud import bigquery
 
