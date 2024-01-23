@@ -1,6 +1,6 @@
 import pendulum
 from airflow import DAG
-from airflow.operators.python import PythonOperator
+from airflow.operators.python import PythonOperator,BigQueryExecuteQueryOperator
 
 # 커스텀 모듈
 from etl.etl_kb_price_index import task
@@ -24,7 +24,16 @@ dag = DAG(
 # ========================================================================================
 # TASK 정의
 # ========================================================================================
-task = PythonOperator(
+
+pre_task = BigQueryExecuteQueryOperator(
+    task_id="기존_데이터_삭제",
+    sql="TRUNCATE TABLE `credible-runner-405908.kb_real_estate.etl_kb_price_index`",
+    use_legacy_sql=False,
+    dag=dag,
+)
+
+
+post_task = PythonOperator(
     task_id = 'ETL_일괄_처리',
     python_callable = task,
     dag = dag
@@ -35,4 +44,4 @@ task = PythonOperator(
 # ========================================================================================
 
 # 단일 task구조
-task
+pre_task >> post_task
