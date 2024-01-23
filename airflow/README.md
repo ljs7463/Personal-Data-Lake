@@ -1,4 +1,4 @@
-## 순서
+## INDEX
 1. 프로젝트 목적
 2. 개발환경 구조
 3. 현재 진행상황
@@ -11,8 +11,27 @@
 4. **웹 배포를 통한 작품공유** : Streamlit에 배포하여 모두가 능동적인 분석을 할 수 있게 하기위함.
 
 ## 2.개발환경 구조
-<img src="https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/27d83549-a6c0-4362-a995-323c14b6b787" align="left" width="900" height="450">
+### A. 그림
+<img src="https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/27d83549-a6c0-4362-a995-323c14b6b787" align="left" width="1000" height="450">
+
+### B. 폴더구조
 
 
+## 3. 진행상황 체크
+~1. KB부동산 API 추출~
 
-## 3.현재 진행상황
+~2. KB부동산 단일테이블 가공작업~
+
+~3. GOOGLE CLOUD BIGQUERY 적재~
+
+~4. Airflow 도커 컨테이너 환경 구성~
+
+~5. Airflow 로컬 파일 컨테이너 환경 마운트 설정~
+
+~6. Airflow 월간 배치 파이프라인 DAG 세팅 및 스케쥴링 자동화 작업~
+
+7. 대시보드 작업
+
+8. Streamlit 컨테이너 작업 
+
+9. Streamlit 배포작업
