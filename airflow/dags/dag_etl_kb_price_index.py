@@ -18,7 +18,6 @@ dag = DAG(
     description = 'KB부동산 api 가격지수1',
     start_date = pendulum.datetime(2024,1,17, tz = KST),
     catchup = False,
-    tag = "KB",
     schedule_interval = "0 16 17 * *", # 매월 17일 16시 월간배치
 )
 
