@@ -1,6 +1,7 @@
 import pendulum
 from airflow import DAG
-from airflow.operators.python import PythonOperator,BigQueryExecuteQueryOperator
+from airflow.operators.python import PythonOperator
+from airflow.providers.google.cloud.operators.bigquery import BigQueryExecuteQueryOperator
 
 # 커스텀 모듈
 from etl.etl_kb_price_index import task
