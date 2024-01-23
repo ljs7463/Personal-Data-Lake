@@ -28,7 +28,7 @@ dag = DAG(
 
 pre_task = BigQueryExecuteQueryOperator(
     task_id="기존_데이터_삭제",
-    sql="TRUNCATE TABLE `credible-runner-405908.kb_real_estate.etl_kb_price_index`",
+    sql="TRUNCATE TABLE `credible-runner-405908.kb_real_estate.etl_kb_api_price_index`",
     use_legacy_sql=False,
     dag=dag,
 )
