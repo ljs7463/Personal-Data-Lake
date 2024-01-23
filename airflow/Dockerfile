@@ -6,6 +6,8 @@ COPY requirements.txt .
 # 파이썬 의존성 목록 설치
 RUN pip install -r requirements.txt
 # ENV PYTHONPATH="$PYTHONPATH:/plugins"
+ENV PYTHONPATH="$PYTHONPATH:/opt/airflow"
+# ENV PYTHONPATH="$PYTHONPATH:/plugins"
 ENV PYTHONPATH="$PYTHONPATH:/opt/airflow/plugins"
 # ENV PYTHONPATH="$PYTHONPATH:core/config"
 ENV PYTHONPATH="$PYTHONPATH:/opt/airflow/core/config"
