@@ -15,6 +15,9 @@
 <img src="https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/27d83549-a6c0-4362-a995-323c14b6b787" align="left" width="1000" height="450">
 
 ### B. 폴더구조
+(작성중)
+### C. Airflow UI
+![image](https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/efbc6260-544a-4613-b0ee-e8c8c4e727df)
 
 
 ## 3. 진행상황 체크
