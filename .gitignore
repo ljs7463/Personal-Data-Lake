@@ -138,4 +138,4 @@ dev
 .env
 
 # 빅쿼리 커스텀 모듈 
-plugins
+# plugins
