@@ -136,3 +136,6 @@ dev
 
 # 파이썬Path경로 설정 파일
 .env
+
+# 빅쿼리 커스텀 모듈 
+plugins/gcp.py
