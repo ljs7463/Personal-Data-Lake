@@ -5,8 +5,9 @@ alembic==1.13.0
 amqp==5.2.0
 annotated-types==0.6.0
 anyio==4.1.0
-apache-airflow==2.8.0
+apache-airflow==2.8.1
 apache-airflow-providers-celery==3.5.0
+apache-airflow-providers-common-io==1.2.0
 apache-airflow-providers-common-sql==1.9.0
 apache-airflow-providers-ftp==3.7.0
 apache-airflow-providers-google==10.13.1
