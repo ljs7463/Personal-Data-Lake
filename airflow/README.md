@@ -15,7 +15,23 @@
 <img src="https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/27d83549-a6c0-4362-a995-323c14b6b787" align="left" width="1000" height="450">
 
 ### B. 폴더구조
-(작성중)
+
+( 폴더구조 재구성 예정)
+```
+airflow
+├─core   // 각종 인증정보 폴더(git 배포 x)
+│  └─config
+├─dags   // airflow dag 폴더
+│  └─etl  // dag에 사용되는 코어 함수
+├─paper  // api or etl 테스트 폴더
+│  └─project1
+├─plugins  // 외부모듈 및 커스텀 모듈
+│  
+└─src  // 각종 파이썬 폴더
+    └─table
+
+```
+
 ### C. Airflow UI
 ![image](https://github.com/ljs7463/Personal-Data-Lake/assets/66814045/efbc6260-544a-4613-b0ee-e8c8c4e727df)
 
